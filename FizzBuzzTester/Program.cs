@@ -1,15 +1,13 @@
 ﻿using System;
 
-namespace FizzBuzzPro2
+namespace FizzBuzzTester
 {
-
-    //Requirements: Hard - Print 1-100, replace the numbers on the output with a word input by the user. 
-    //If the number is divisible by boh 5 and 3, print the whole word, if just 5, print the first half, 
-    //if just 3, print the second half, if nothing, print the number. Alternate case per each output.
-
-    class MainClass
+    internal class Program
     {
-        public static void Main(string[] args)
+        //Requirements: Hard - Print 1-100, replace the numbers on the output with a word input by the user.
+        //If the number is divisible by boh 5 and 3, print the whole word, if just 5, print the first half,
+        //if just 3, print the second half, if nothing, print the number. Alternate case per each output.
+        private static void Main(string[] args)
         {
             Intro();
             string userInput = Console.ReadLine();     //Gets the Word
@@ -24,11 +22,11 @@ namespace FizzBuzzPro2
             FizzBuzz(one, two);                        //Chaos Ensues
         }
 
-
         public static void Intro()
         {
             Console.WriteLine("Please choose a word or sentence for FizzBuzz!");
         }
+
         public static double GetWordCount(string s1)
         {
             double count = 0;
@@ -36,6 +34,7 @@ namespace FizzBuzzPro2
             {
                 count++;
             }
+
             return count;
         }
 
@@ -84,7 +83,6 @@ namespace FizzBuzzPro2
                         Console.WriteLine(w1.ToLower() + w2.ToLower());
                     }
                 }
-
                 else if (i % 5 == 0)
                 {
                     if (i % 2 == 0)
@@ -96,7 +94,6 @@ namespace FizzBuzzPro2
                         Console.WriteLine(w2.ToLower());
                     }
                 }
-
                 else if (i % 3 == 0)
                 {
                     if (i % 2 == 0)
@@ -108,13 +105,11 @@ namespace FizzBuzzPro2
                         Console.WriteLine(w1.ToLower());
                     }
                 }
-
                 else
                 {
                     Console.WriteLine(i);
                 }
             }
         }
-
     }
 }
